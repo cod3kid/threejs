@@ -15,6 +15,8 @@ const aspect = {
 
 const camera = new THREE.PerspectiveCamera(75, aspect.width / aspect.height); // By default near value is 1 and far value is 2000
 camera.position.z = 3;
+camera.position.y = 1;
+camera.position.x = 1;
 scene.add(camera);
 
 // Renderer
