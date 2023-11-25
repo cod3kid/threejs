@@ -5,6 +5,11 @@ const scene = new THREE.Scene();
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({ color: "purple" });
 const mesh = new THREE.Mesh(geometry, material);
+mesh.position.x = 1;
+mesh.position.z = -2;
+mesh.scale.x = 2;
+mesh.rotation.x = Math.PI * 0.25;
+mesh.rotation.y = Math.PI * 1.2;
 scene.add(mesh);
 
 // Camera
