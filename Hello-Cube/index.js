@@ -1,17 +1,29 @@
 // Scene
 const scene = new THREE.Scene();
 
+// Group
+const group = new THREE.Group();
 // Object or Mesh
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({ color: "purple" });
 const mesh = new THREE.Mesh(geometry, material);
-mesh.position.x = 1;
-mesh.position.z = -2;
-mesh.scale.x = 2;
-mesh.rotation.x = Math.PI * 0.25;
-mesh.rotation.y = Math.PI * 1.2;
-scene.add(mesh);
+// mesh.position.x = 1;
+// mesh.position.z = -2;
+// mesh.scale.x = 2;
+// mesh.rotation.x = Math.PI * 0.25;
+// mesh.rotation.y = Math.PI * 1.2;
+// scene.add(mesh);
 
+// Mesh 2
+const geometryT = new THREE.BoxGeometry(1, 1, 1);
+const materialT = new THREE.MeshBasicMaterial({ color: "green" });
+const meshT = new THREE.Mesh(geometryT, materialT);
+meshT.position.y = 2;
+// scene.add(meshT);
+
+group.add(mesh, meshT);
+scene.add(group);
+group.position.x = 3;
 // Camera
 const aspect = {
   height: window.innerHeight,
