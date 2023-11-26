@@ -24,6 +24,10 @@ meshT.position.y = 2;
 group.add(mesh, meshT);
 scene.add(group);
 group.position.x = 3;
+
+// AxesHelper
+const axesHelper = new THREE.AxesHelper(2);
+scene.add(axesHelper);
 // Camera
 const aspect = {
   height: window.innerHeight,
