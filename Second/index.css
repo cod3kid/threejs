@@ -1,0 +1,9 @@
+body {
+  background-color: black;
+}
+
+.draw {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
