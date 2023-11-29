@@ -22,8 +22,13 @@ const canvas = document.querySelector(".draw");
 const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.setSize(aspect.width, aspect.height);
 
+// Clock Class
+const clock = new THREE.Clock();
+
 const animate = () => {
-  mesh.rotation.x += 0.01;
+  // GetElapsedTime
+  const elapsedTime = clock.getElapsedTime();
+  mesh.rotation.y = elapsedTime * (Math.PI / 2);
   renderer.render(scene, camera);
   window.requestAnimationFrame(animate);
 };
