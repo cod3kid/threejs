@@ -32,6 +32,10 @@ const animate = () => {
   // GetElapsedTime
   const elapsedTime = clock.getElapsedTime();
   mesh.rotation.y = elapsedTime * (Math.PI / 2);
+  // Linear Function
+  mesh.position.x = elapsedTime;
+  mesh.position.y = elapsedTime;
+
   renderer.render(scene, camera);
   window.requestAnimationFrame(animate);
 };
