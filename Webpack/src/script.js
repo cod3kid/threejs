@@ -17,7 +17,7 @@ const aspect = {
 const camera = new THREE.PerspectiveCamera(75, aspect.width / aspect.height);
 camera.position.z = 3;
 camera.position.x = 0;
-camera.position.y = 1;
+camera.position.y = 0;
 
 scene.add(camera);
 
@@ -33,8 +33,12 @@ const animate = () => {
   const elapsedTime = clock.getElapsedTime();
   mesh.rotation.y = elapsedTime * (Math.PI / 2);
   // Linear Function
-  mesh.position.x = elapsedTime;
-  mesh.position.y = elapsedTime;
+  //   mesh.position.x = elapsedTime;
+  //   mesh.position.y = elapsedTime;
+
+  mesh.position.x = Math.sin(elapsedTime);
+  mesh.position.y = Math.cos(elapsedTime);
+  //   mesh.position.x = Math.tan(elapsedTime);
 
   renderer.render(scene, camera);
   window.requestAnimationFrame(animate);
